@@ -1,4 +1,5 @@
 services:
+  # Backend (FastAPI)
   - type: web
     name: cloud-cost-optimizer-backend
     env: python
@@ -16,7 +17,8 @@ services:
       - key: CORS_ORIGINS
         sync: false
 
-  - type: static
+  # Frontend (React static site)
+  - type: web
     name: cloud-cost-optimizer-frontend
     env: static
     plan: free
