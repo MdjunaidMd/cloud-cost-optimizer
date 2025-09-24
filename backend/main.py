@@ -13,12 +13,12 @@ from sqlmodel import SQLModel, Field, create_engine, select, Session as SQLModel
 from sqlalchemy.orm import Session as AlchSession
 from sqlalchemy import delete
 
-# local/project imports
-from services.analysis import find_idle_recommendations
-import schemas
-import crud
-from db import SessionLocal as AlchSessionLocal, init_db as init_usage_db
-from models import UsageRecord  # SQLAlchemy model used by usage endpoints
+# local/project imports (fixed with backend.)
+from backend.services.analysis import find_idle_recommendations
+from backend import schemas
+from backend import crud
+from backend.db import SessionLocal as AlchSessionLocal, init_db as init_usage_db
+from backend.models import UsageRecord  # SQLAlchemy model used by usage endpoints
 
 # ---------------- App ----------------
 app = FastAPI(title="Cloud Cost Optimizer - Unified Backend")
