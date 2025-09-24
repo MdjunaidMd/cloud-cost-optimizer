@@ -1,6 +1,6 @@
 # backend/services/analysis.py
 
-from models import UsageRecord
+from backend.models import UsageRecord
 
 def find_idle_recommendations(db):
     """
