@@ -22,7 +22,6 @@ services:
     name: cloud-cost-optimizer-frontend
     env: static
     plan: free
-    region: singapore
     buildCommand: npm install && npm run build
     staticPublishPath: frontend/dist
     envVars:
