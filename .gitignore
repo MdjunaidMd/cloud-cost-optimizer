@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+
+# SQLite / DB files
+*.db
+cloudopt.db
+cloud_costs.db
+
+# Secrets
+.env
+*.env
+
+# Node/Front-end
+node_modules/
+dist/
+build/
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
