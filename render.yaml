@@ -3,7 +3,6 @@ services:
   - type: web
     name: cloud-cost-optimizer-backend
     env: python
-    plan: free
     region: singapore
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
@@ -21,7 +20,6 @@ services:
   - type: web
     name: cloud-cost-optimizer-frontend
     env: static
-    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: frontend/dist
     envVars:
