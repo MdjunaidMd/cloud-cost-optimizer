@@ -1,7 +1,6 @@
 # backend/crud.py
 from sqlalchemy.orm import Session
-import models
-import schemas
+from backend import models, schemas   # ✅ fixed imports
 
 def create_usage(db: Session, usage: schemas.UsageCreate):
     obj = models.UsageRecord(

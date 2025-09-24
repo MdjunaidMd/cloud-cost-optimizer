@@ -1,7 +1,7 @@
 # backend/models.py
 from sqlalchemy import Column, Integer, String, Float, DateTime
 from datetime import datetime
-from db import Base
+from backend.db import Base   # ✅ must be backend.db, not db
 
 class UsageRecord(Base):
     __tablename__ = "usage_records"
@@ -13,3 +13,4 @@ class UsageRecord(Base):
     usage_amount = Column(Float)                  # hours, GB, etc.
     cost = Column(Float)                          # cost in $
     timestamp = Column(DateTime, default=datetime.utcnow)
+
